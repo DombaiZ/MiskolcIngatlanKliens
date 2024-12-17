@@ -46,13 +46,13 @@
                         HorizontalAlignment="Center">
                 <Button x:Name="btnUj" 
                         Content="Új ingatlan" 
-                        Click="btnUj_Click"/>
+                        Click="BtnUj_Click"/>
                 <Button x:Name="btnModositas" 
                         Content="Módosítás" 
-                        Click="btnModositas_Click"/>
+                        Click="BtnModositas_Click"/>
                 <Button x:Name="btnTorol" 
                         Content="Törlés" 
-                        Click="btnTorol_Click"/>
+                        Click="BtnTorol_Click"/>
             </StackPanel>
         </StackPanel>
         <DataGrid x:Name="dgrIngatlanok" Grid.Column="1"/>
