@@ -1,0 +1,60 @@
+﻿<Window x:Class="MiskolcIngatlanKliens.SubWindows.IngatlanokWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MiskolcIngatlanKliens.SubWindows"
+        mc:Ignorable="d"
+        Title="Ingatlanok kezelése" Height="450" Width="900">
+    <Window.Resources>
+        <Style TargetType="Label">
+            <Setter Property="Margin" Value="5,5,5,0"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="5,0,5,0"/>
+        </Style>
+        <Style TargetType="ComboBox">
+            <Setter Property="Margin" Value="5,0,5,0"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="5,5,5,0"/>
+        </Style>
+
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <Label Content="Id"/>
+            <TextBox x:Name="tbxId"/>
+            <Label Content="Település"/>
+            <TextBox x:Name="tbxTelepules"/>
+            <Label Content="Cím"/>
+            <TextBox x:Name="tbxCim"/>
+            <Label Content="Ár"/>
+            <TextBox x:Name="tbxAr"/>
+            <Label Content="Típus"/>
+            <TextBox x:Name="tbxTipus"/>
+            <Label Content="KépNév"/>
+            <TextBox x:Name="tbxKepNev"/>
+            <Label Content="Ügyintéző"/>
+            <ComboBox Name="cbxUgyintezo"/>
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center">
+                <Button x:Name="btnUj" 
+                        Content="Új ingatlan" 
+                        Click="btnUj_Click"/>
+                <Button x:Name="btnModositas" 
+                        Content="Módosítás" 
+                        Click="btnModositas_Click"/>
+                <Button x:Name="btnTorol" 
+                        Content="Törlés" 
+                        Click="btnTorol_Click"/>
+            </StackPanel>
+        </StackPanel>
+        <DataGrid x:Name="dgrIngatlanok" Grid.Column="1"/>
+    </Grid>
+</Window>
