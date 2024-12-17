@@ -20,5 +20,15 @@ namespace MiskolcIngatlanKliens
         {
             InitializeComponent();
         }
+
+        private void IngatlanokAblakNyit(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void UgyintezokAblakNyit(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -7,6 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Menu VerticalAlignment="Center">
+            <MenuItem Header="Ingatlanok" Click="IngatlanokAblakNyit"/>
+            <MenuItem Header="Ügyintézők" Click="UgyintezokAblakNyit"/>
+        </Menu>
     </Grid>
 </Window>
