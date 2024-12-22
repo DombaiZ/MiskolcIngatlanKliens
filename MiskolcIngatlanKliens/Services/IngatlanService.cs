@@ -34,5 +34,18 @@ namespace MiskolcIngatlanKliens.Services
             var valasz = await response.Content.ReadAsStringAsync();
             return valasz;
         }
+
+        public async Task DeleteIngatlanAsync(int id, HttpClient client)
+        {
+            HttpResponseMessage response = await client.DeleteAsync($"api/ingatlanok/{id}");
+            response.EnsureSuccessStatusCode();
+        }
+
+        public async Task UpdateIngatlanAsync(int id, Ingatlan updatedIngatlan, HttpClient client)
+        {
+            HttpResponseMessage response = await client.PutAsJsonAsync($"api/ingatlanok/{id}", updatedIngatlan);
+            response.EnsureSuccessStatusCode();
+        }
+
     }
 }

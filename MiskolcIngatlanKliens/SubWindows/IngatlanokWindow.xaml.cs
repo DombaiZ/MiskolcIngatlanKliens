@@ -53,12 +53,25 @@ namespace MiskolcIngatlanKliens.SubWindows
 
         private void BtnModositas_Click(object sender, RoutedEventArgs e)
         {
-
+            try
+            {
+                MessageBox.Show("Ingatlan sikeresen frissítve!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Hiba történt: {ex.Message}");
+            }
         }
-
         private void BtnTorol_Click(object sender, RoutedEventArgs e)
         {
-
+            try
+            {
+                MessageBox.Show("Ingatlan sikeresen törölve!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Hiba történt: {ex.Message}");
+            }
         }
 
         private async void Feltolt()
